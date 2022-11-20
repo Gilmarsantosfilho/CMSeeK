@@ -1,6 +1,6 @@
 # CMSeeK
 
-# Instalação 
+# Instalação LINUX 
 
 ```
 git clone https://github.com/Gilmarsantosfilho/CMSeeK/
