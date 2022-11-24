@@ -21,11 +21,22 @@
   - Várias outras verificações
 - Sistema modular de força bruta
   - Use módulos bruteforce pré-fabricados ou crie o seu próprio e integre-o
+  
+  #Para Funcionar precisa instalar essa dependência!
+  
+  ```
+  pip install -r requirements.txt
+    ou 
+  pip3  install -r requirements.txt
+    ou 
+  ```
 
 # Instalação LINUX 
 
 ```
 git clone https://github.com/Gilmarsantosfilho/CMSeeK/
+
+cd CMSeek
 ```
 
 # Como Usar
