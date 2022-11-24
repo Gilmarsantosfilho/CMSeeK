@@ -26,7 +26,10 @@
   
   ```
   pip install -r requirements.txt
-    ou 
+  ```
+  ou 
+  
+  ```
   pip3  install -r requirements.txt
     ou 
   ```
