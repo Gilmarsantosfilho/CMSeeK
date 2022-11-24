@@ -152,28 +152,25 @@ elif args.list is not None:
 ###      THE MAIN MENU       ###
 ################################
 cmseek.clearscreen()
-cmseek.banner("Tip: You can use cmseek via arguments as well check the help menu for more information")
+cmseek.banner("Tip: Você pode usar o cmseek por meio de argumentos, bem como verificar o menu de ajuda para obter mais informações")
 print (" Input    Description")
 print ("=======  ==============================")
-print ("  [1]    CMS detection and Deep scan")
-print ("  [2]    Scan Multiple Sites")
+print ("  [1]    Detecção de CMS e verificação profunda")
+print ("  [2]    Verificar vários sites")
 print ("  [3]    Bruteforce CMSs")
 print ("  [U]    Update CMSeeK")
-print ("  [R]    Rebuild Cache (Use only when you add any custom module)")
+print ("  [R]    Reconstruir Cache (Use somente quando você adicionar qualquer módulo personalizado)")
 print ("  [0]    Exit CMSeeK :( \n")
 
 selone = input("Enter Your Desired Option: ").lower()
 if selone == 'r':
-    cmseek.update_brute_cache()
-elif selone == 'u':
-    cmseek.update()
 elif selone == '0':
     cmseek.bye()
 
 elif selone == "1":
     # There goes the cms detection thingy
     cmseek.clearscreen()
-    cmseek.banner("CMS Detection And Deep Scan")
+    cmseek.banner("Detecção CMS e Varredura Profunda")
     site = cmseek.targetinp("") # Get The User input
     if cua == None:
         cua = cmseek.randomua()
@@ -182,9 +179,9 @@ elif selone == "1":
 
 elif selone == '2':
     cmseek.clearscreen()
-    cmseek.banner("CMS Detection And Deep Scan")
+    cmseek.banner("Detecção CMS e Varredura Profunda")
     sites_list = []
-    sites = input('Enter comma separated urls(http://1.com,https://2.org) or enter path of file containing URLs (comma separated): ')
+    sites = input('Enter comma separated urls(http://1.com,https://2.org) ou insira o caminho do arquivo contendo URLs (separados por vírgula): ')
     if 'http' not in sites or '://' not in sites:
         cmseek.info('Treating input as path')
         try:
@@ -192,10 +189,10 @@ elif selone == '2':
             file_contents = ot.read().replace('\n','')
             sites_list = file_contents.split(',')
         except FileNotFoundError:
-            cmseek.error('Invalid path! CMSeeK is quitting')
+            cmseek.error('Caminho inválido! CMSeeK está saindo')
             cmseek.bye()
     else:
-        cmseek.info('Treating input as URL list')
+        cmseek.info('Tratando entrada como lista de URL')
         sites_list = sites.split(',')
     if sites_list != []:
         if cua == None:
@@ -212,9 +209,9 @@ elif selone == '2':
                 print('\n')
                 cmseek.warning('Invalid URL: ' + cmseek.bold + s + cmseek.cln + ' Skipping to next')
         print('\n')
-        cmseek.result('Finished Scanning all targets.. result has been saved under respective target directories','')
+        cmseek.result('Verificação concluída de todos os alvos.. o resultado foi salvo nos respectivos diretórios de destino','')
     else:
-        cmseek.error("No url provided... CMSeeK is exiting")
+        cmseek.error("Nenhum url fornecido... CMSeeK está saindo")
     cmseek.bye()
 
 elif selone == "3":
