@@ -31,7 +31,6 @@
   
   ```
   pip3  install -r requirements.txt
-    ou 
   ```
 
 # Instalação LINUX 
