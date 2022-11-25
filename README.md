@@ -47,3 +47,6 @@ cd CMSeek
 python3 cmseek.py
 ```
 
+## Disclaimer:
+
+**O uso do CMSeeK para testar ou explorar sites sem consistência mútua prévia pode ser considerado uma atividade ilegal. É responsabilidade do usuário final obedecer a todas as leis locais, estaduais e federais aplicáveis. Os autores não assumem nenhuma responsabilidade e não são responsáveis ​​por qualquer uso indevido ou dano causado por este programa.**
